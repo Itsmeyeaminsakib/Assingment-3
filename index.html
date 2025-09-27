@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Form Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explore all HTML input types with this interactive demo</h1>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="signup">Sign Up Form</button>
+            <button class="tab" data-tab="inputs">All Input Types</button>
+            <button class="tab" data-tab="data">Student Data</button>
+        </div>
+        
+        <div id="signup" class="tab-content active">
+            <div class="progress-bar">
+                <div class="progress" id="signup-progress"></div>
+            </div>
+            
+            <form id="signup-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <div class="input-with-icon">
+                            <input type="text" id="username" placeholder="Ex. itsmeyeaminsakib" required>
+                            <i>👤</i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="password" placeholder="Create a strong password" required>
+                            <i class="password-toggle">👁️</i>
+                        </div>
+                        <div class="password-strength">
+                            <span id="strength-text">Password strength</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label>Account Type</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="account-type" value="personal" checked> Personal Account
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="account-type" value="business"> Business Account
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="account-type" value="student"> Student Account
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label class="checkbox-option">
+                            <input type="checkbox" required> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn">Create Account</button>
+                    <button type="reset" class="btn btn-reset">Clear Form</button>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <p>Already have an account? <a href="#">Log in here</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div id="inputs" class="tab-content">
+            <form>
+                <div class="form-section">
+                    <h3>📝 Basic Inputs</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="text-input">Text Input</label>
+                            <input type="text" id="text-input" placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password-input">Password</label>
+                            <input type="password" id="password-input" placeholder="Enter a password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email-input">Email</label>
+                            <input type="email" id="email-input" placeholder="user@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="number-input">Number (1-100)</label>
+                            <input type="number" id="number-input" min="1" max="100" value="50">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>🌐 Web & Contact</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tel-input">Telephone</label>
+                            <input type="tel" id="tel-input" placeholder="+1 (555) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="url-input">Website URL</label>
+                            <input type="url" id="url-input" placeholder="https://example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="search-input">Search</label>
+                            <input type="search" id="search-input" placeholder="Search...">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>📅 Date & Time</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="date-input">Date</label>
+                            <input type="date" id="date-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time-input">Time</label>
+                            <input type="time" id="time-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="week-input">Week</label>
+                            <input type="week" id="week-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="month-input">Month</label>
+                            <input type="month" id="month-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="datetime-input">Date/Time Local</label>
+                            <input type="datetime-local" id="datetime-input">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>🎨 Special Inputs</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="color-input">Color Picker</label>
+                            <input type="color" id="color-input" value="#6a11cb">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="range-input">Range Slider</label>
+                            <input type="range" id="range-input" min="0" max="100" value="50">
+                            <span id="range-value">50</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="file-input">File Upload</label>
+                            <input type="file" id="file-input">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>☑️ Selection Inputs</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="gender" value="male"> Male
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="gender" value="female"> Female
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="gender" value="other"> Other
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Interests</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="sports"> Sports
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="music"> Music
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="reading"> Reading
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="travel"> Travel
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="select-input">Select Dropdown</label>
+                            <select id="select-input">
+                                <option value="">Select your semester</option>
+                                <option>1st Semester</option>
+                                <option>2nd Semester</option>
+                                <option>3rd Semester</option>
+                                <option>4th Semester</option>
+                                <option>5th Semester</option>
+                                <option>6th Semester</option>
+                                <option>7th Semester</option>
+                                <option>8th Semester</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>💬 Text Area</h3>
+                    <div class="form-group">
+                        <label for="textarea-input">Comments</label>
+                        <textarea id="textarea-input" rows="4" placeholder="Write your comments here..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn">Submit Form</button>
+                    <button type="reset" class="btn btn-reset">Reset Form</button>
+                </div>
+            </form>
+        </div>
+        
+        <div id="data" class="tab-content">
+            <div class="table-container">
+                <h2>Student Performance Data</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>Course</th>
+                            <th>GPA</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>YEAMIN AHMED SAKIB</td>
+                            <td>871226</td>
+                            <td>Computer Science</td>
+                            <td>3.90</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>RAFI MUHAMMAD</td>
+                            <td>871203</td>
+                            <td>Computer Science</td>
+                            <td>3.89</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>AKRAMUL WADUD</td>
+                            <td>871224</td>
+                            <td>Computer Science</td>
+                            <td>4.00</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>TUHIN BHAI</td>
+                            <td>871204</td>
+                            <td>Computer Science</td>
+                            <td>4.00</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>RAKIB </td>
+                            <td>871206</td>
+                            <td>Computer Science</td>
+                            <td>4.00</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Developed by: <span class="highlight">YEAMIN AHMED SAKIB</span> | Student ID: <span class="highlight">871204</span></p>
+            <p>(4/CST/A1) - Modern Web Development Project</p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // Password strength indicator
+        const passwordInput = document.getElementById('password');
+        const strengthText = document.getElementById('strength-text');
+        const progressBar = document.getElementById('signup-progress');
+        
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            let text = '';
+            let color = '';
+            
+            if (password.length >= 8) strength += 25;
+            if (/[A-Z]/.test(password)) strength += 25;
+            if (/[0-9]/.test(password)) strength += 25;
+            if (/[^A-Za-z0-9]/.test(password)) strength += 25;
+            
+            progressBar.style.width = strength + '%';
+            
+            if (strength < 50) {
+                text = 'Weak';
+                color = 'strength-weak';
+            } else if (strength < 75) {
+                text = 'Medium';
+                color = 'strength-medium';
+            } else {
+                text = 'Strong';
+                color = 'strength-strong';
+            }
+            
+            strengthText.textContent = `Password strength: ${text}`;
+            strengthText.className = `password-strength ${color}`;
+        });
+        
+        // Range value display
+        const rangeInput = document.getElementById('range-input');
+        const rangeValue = document.getElementById('range-value');
+        
+        rangeInput.addEventListener('input', function() {
+            rangeValue.textContent = this.value;
+        });
+        
+        // Password visibility toggle
+        const passwordToggle = document.querySelector('.password-toggle');
+        passwordToggle.addEventListener('click', function() {
+            const passwordField = document.getElementById('password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                this.textContent = '🔒';
+            } else {
+                passwordField.type = 'password';
+                this.textContent = '👁️';
+            }
+        });
+        
+        // Form submission handlers
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Account created successfully! (This is a demo)');
+        });
+    </script>
+</body>
+</html>
